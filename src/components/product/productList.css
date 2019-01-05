@@ -1,0 +1,9 @@
+.list-items__ul{
+	list-style: none;
+	padding: 0;
+}
+
+.list-items__li{
+	margin-bottom: .5rem;
+	font-size: 1.2rem;
+}

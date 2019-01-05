@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProductList from './productList';
+import './product.css';
 
 class Product extends Component {
 	
 	render() {
 		return (
-			<div>
-				<ProductList 
-					id={this.product.id}
-					name={this.product.name}
-					/>
+			<div className="product-list">
+			<ProductList items={this.props.product}	/>
 			</div>
 		)
 	}
