@@ -1,9 +1,9 @@
 .product-list{
-	max-width: 20rem;
+	max-width: 60rem;
 	background: rgba(31, 97, 103, 0.5);
 	color: #eee;
 	display: flex;
 	justify-content: center;
 	margin: 1rem auto auto 1rem;
-	height: 40vh;
+	height: 80vh;
 }

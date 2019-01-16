@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProductList from './productList';
+import InCart from './incart';
 import './product.css';
 
 class Product extends Component {
@@ -9,6 +10,7 @@ class Product extends Component {
 		return (
 			<div className="product-list">
 			<ProductList items={this.props.product}	/>
+			<InCart inItems={this.props.addedProduct} />
 			</div>
 		)
 	}
@@ -17,7 +19,8 @@ class Product extends Component {
 
 const mapStateToProps = state => {
 	return {
-		product: state.product
+		product: state.product,
+		addedProduct: state.cartItems
 	}
 }
 

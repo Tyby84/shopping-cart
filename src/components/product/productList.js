@@ -1,10 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actionTypes from '../../store/actions';
 
 import './productList.css';
 
 const ProductList = (props) => {
 	let listItems = props.items.map((item) =>{
-		return <li className="list-items__li" key={item.id}>{item.name} | {item.desc}</li>;
+		return <li className="list-items__li" key={item.id}>{item.name} | {item.desc} 
+			<button className="list-items-btn"
+					onClick={() => props.addToCart(item.name,item.desc, item.id)}
+				>Add</button></li>;
 	});
 	
 	return (
@@ -13,5 +18,10 @@ const ProductList = (props) => {
 		</div>
 	);
 }
+const mapDispatchToProps = dispatch => {
+	return {
+		addToCart: (name, desc,id) => dispatch({type: actionTypes.ADDTOCART, itemData:{name:name, desc:desc, id:id}})
+	}
+}
 
-export default ProductList;
+export default connect(null, mapDispatchToProps)(ProductList);
