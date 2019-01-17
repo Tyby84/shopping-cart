@@ -1,0 +1,12 @@
+@import '../product/css/variables';
+
+.prod-num{
+	position: absolute;
+	top: 1rem;
+	right: 5rem;
+	background-color: $main;
+	color: $text;
+	padding: .5rem 1rem;
+	font-size: 2rem;
+	border-radius: 50%;
+}

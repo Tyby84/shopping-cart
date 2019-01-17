@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions';
 
-import './css/productList.css';
+import './css/productList.scss';
 
 const ProductList = (props) => {
 	let listItems = props.items.map((item) =>{

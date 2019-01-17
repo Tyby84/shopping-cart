@@ -1,0 +1,39 @@
+@import 'variables';
+.product-list{
+	max-width: 60rem;
+	background: $main;
+	color: $text;
+	display: flex;
+	justify-content: center;
+	margin: 1rem auto auto 1rem;
+	padding: 0 1rem;
+	height: 80vh;
+}
+
+.list-items__ul{
+	list-style: none;
+	padding: 0;
+}
+
+.list-items__li{
+	margin-bottom: .5rem;
+	font-size: 1.2rem;
+}
+
+.list-items-btn{
+	margin: 0 .5rem;
+	background-color: $btn-back;
+	color: $text;
+	padding: .5rem;
+	box-shadow: none;
+	border: 2px solid $main;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: background .6s ease-out,
+				border 1s ease-out;
+}
+
+.list-items-btn:hover{
+	background-color: darken($btn-back, 25%);
+	border-color: $text;
+}

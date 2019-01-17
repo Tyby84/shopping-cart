@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Product from './components/product/product';
+import ProductNumber from './components/product-number/prod-num';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Product />
+		<ProductNumber />
       </div>
     );
   }

@@ -1,0 +1,17 @@
+@import 'variables';
+
+.shopping-cart{
+	background-color: $cart-back;
+	color: $text;
+	margin: 1rem;
+	padding: 1rem;
+	/*display: flex;*/
+	&__ul{
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 1rem;
+	}
+	
+}

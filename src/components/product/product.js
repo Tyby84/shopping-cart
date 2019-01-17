@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProductList from './productList';
 import InCart from './incart';
-import './css/product.css';
-import './css/incart.css';
+import './css/productList.scss';
+import './css/incart.scss';
 import './css/main.css';
 
 class Product extends Component {

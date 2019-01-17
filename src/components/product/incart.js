@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/incart.css';
+import './css/incart.scss';
 
 const InCart = props => {
 	let cartItems = props.inItems.map(item => {
