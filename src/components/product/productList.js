@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions';
 
-import './productList.css';
+import './css/productList.css';
 
 const ProductList = (props) => {
 	let listItems = props.items.map((item) =>{
 		return <li className="list-items__li" key={item.id}>{item.name} | {item.desc} 
 			<button className="list-items-btn"
 					onClick={() => props.addToCart(item.name,item.desc, item.id)}
-				>Add</button></li>;
+				>Add to cart</button></li>;
 	});
 	
 	return (
