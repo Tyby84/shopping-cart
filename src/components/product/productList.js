@@ -6,10 +6,15 @@ import './css/productList.scss';
 
 const ProductList = (props) => {
 	let listItems = props.items.map((item) =>{
-		return <li className="list-items__li" key={item.id}>{item.name} | {item.desc} 
+		return ( 
+			<div className="list-items">
+			<h1 className="list-items__name">{item.name}</h1>
+			<span className="list-items__desc">{item.desc}</span>
 			<button className="list-items-btn"
 					onClick={() => props.addToCart(item.name,item.desc, item.id)}
-				>Add to cart</button></li>;
+				>Add to cart</button>
+				</div>
+			)
 	});
 	
 	return (

@@ -1,24 +1,36 @@
 @import 'variables';
 .product-list{
-	max-width: 60rem;
+	width: 80rem;
 	background: $main;
 	color: $text;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	margin: 1rem auto auto 1rem;
 	padding: 0 1rem;
-	height: 80vh;
+	height: auto;
 }
 
-.list-items__ul{
-	list-style: none;
-	padding: 0;
+.list-items{
+	border: 1px solid $text;
+	padding:  0 .5rem 1rem .5rem;
+	margin: .5rem;
+	display: flex;
+	width: 250px;
+	background-color: darken($main, 5%);
+	flex-direction: column;
+	align-items: center;
+	&__name{
+		padding-bottom: .5rem;
+		border-bottom: 1px solid $text;
+	}
+	&__desc{
+		padding:0 0 1rem 0 ;
+	}
+	
 }
 
-.list-items__li{
-	margin-bottom: .5rem;
-	font-size: 1.2rem;
-}
+
 
 .list-items-btn{
 	margin: 0 .5rem;
