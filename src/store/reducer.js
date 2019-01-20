@@ -24,6 +24,12 @@ const reducer = (state = initialState, action) => {
 				...state,
 				cartItems: state.cartItems.concat( newItem )
 			}
+			case actionTypes.REMOVEITEM:
+			const newCart = state.cartItems.filter((item) => item.id !== action.payload.id);
+			return {
+				...state,
+				cartItems: newCart
+			}
 	}
 	
 	return state;
