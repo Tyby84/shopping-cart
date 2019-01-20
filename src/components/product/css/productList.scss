@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixin';
 .product-list{
 	width: 80rem;
 	background: $main;
@@ -33,19 +34,9 @@
 
 
 .list-items-btn{
-	margin: 0 .5rem;
-	background-color: $btn-back;
-	color: $text;
-	padding: .5rem;
-	box-shadow: none;
-	border: 2px solid $main;
-	border-radius: 1rem;
-	cursor: pointer;
-	transition: background .6s ease-out,
-				border 1s ease-out;
+	@include btn($btn-back);
 }
 
 .list-items-btn:hover{
-	background-color: darken($btn-back, 25%);
-	border-color: $text;
+	@include hover($btn-back);
 }

@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin btn($back){
+	margin: 0 .5rem;
+	background-color: $back;
+	color: $text;
+	padding: .5rem;
+	box-shadow: none;
+	border: 2px solid $main;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: background .6s ease-out,
+				border 1s ease-out;
+}
+
+@mixin hover($back, $percent:25%){
+	background-color: darken($back, $percent);
+	border-color: $text;
+}

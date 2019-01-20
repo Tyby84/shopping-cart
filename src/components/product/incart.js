@@ -10,7 +10,7 @@ const InCart = props => {
 			<li className="shopping-cart__li" key={item.id}>
 			<h1>{item.name}</h1>
 			<h3>{item.desc}</h3>
-			<button onClick={() => props.removeItem(item.id)}>Remove item</button>
+			<button className="incart-btn" onClick={() => props.removeItem(item.id)}>Remove item</button>
 			</li>
 			</div>
 		);
