@@ -15,11 +15,24 @@ const InCart = props => {
 			</div>
 		);
 	});
+
+	
+	if(cartItems == 0){
+		return (
+			<div>
+			<p>The shopping cart is empty...</p>
+			</div>
+		);
+	} else {
 	return (
+		
 		<div>
 		<ul className="shopping-cart__ul">{cartItems}</ul>
 		</div>
 	);
+	}
+
+
 }
 
 const mapStateToProps = state => {
