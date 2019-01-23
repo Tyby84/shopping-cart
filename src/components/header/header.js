@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Product from '../product/product';
-import Cart from '../product/incart';
+import { Link } from "react-router-dom";
+
 const Header = props => {
 	return (
-		<Router>
+		
 			<div>
 				<nav>
 				<ul>
@@ -12,11 +11,10 @@ const Header = props => {
 				<li><Link to="/cart">Shopping Cart</Link></li>
 				</ul>
 				</nav>
-			<Route path="/" exact component={Product} />
-			<Route path="/cart" component={Cart} />
+			
 		
 			</div>
-		</Router>
+		
 	);
 }
 

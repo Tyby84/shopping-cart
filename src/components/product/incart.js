@@ -22,10 +22,16 @@ const InCart = props => {
 	);
 }
 
+const mapStateToProps = state => {
+	return {
+		inItems: state.cartItems
+	}
+}
+
 const mapDispatchToProps = dispatch => {
 	return {
 		removeItem: (id) => dispatch({type:actionTypes.REMOVEITEM, payload:{id:id}})
 	}
 }
 
-export default connect(null, mapDispatchToProps)(InCart);
+export default connect(mapStateToProps, mapDispatchToProps)(InCart);
