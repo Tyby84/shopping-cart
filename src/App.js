@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import { connect } from 'react-redux';
 
 import InCart from './components/product/incart';
 import Header from './components/header/header';
@@ -25,11 +24,6 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-	return {
-	
-		addedProduct: state.cartItems
-	}
-}
 
-export default connect(mapStateToProps)(App);
+
+export default App;

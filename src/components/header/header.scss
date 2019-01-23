@@ -1,0 +1,30 @@
+@import '../product/css/variables';
+
+.navigation{
+	display: flex;
+	background-color: lighten($main,10%);
+	height: 3.5rem;
+	&__ul{
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	&__li{
+		margin-right: 2rem;
+		display: flex;
+		align-items: center;
+	}
+	
+	&__li a{
+		transition: background .4s; 
+		padding: .5rem;
+		text-decoration: none;
+		color: $text;
+		border-radius: 10px;
+		&:hover,
+		&:active{
+			background-color: $main;
+		}
+	}
+}
