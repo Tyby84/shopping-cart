@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/incart.scss';
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions';
 
@@ -16,11 +17,13 @@ const InCart = props => {
 		);
 	});
 
-	
 	if(cartItems == 0){
 		return (
-			<div>
-			<p>The shopping cart is empty...</p>
+			<div className="empty-cart">
+			<p className="empty-cart__msg">The shopping cart is empty...</p>
+			<div className="link">
+				<Link to="/">Back to the shop!</Link>
+			</div>
 			</div>
 		);
 	} else {
@@ -31,8 +34,6 @@ const InCart = props => {
 		</div>
 	);
 	}
-
-
 }
 
 const mapStateToProps = state => {

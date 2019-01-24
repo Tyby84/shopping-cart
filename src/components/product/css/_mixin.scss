@@ -1,6 +1,7 @@
 @import 'variables';
 
 @mixin btn($back){
+	display: block;
 	margin: 0 .5rem;
 	background-color: $back;
 	color: $text;

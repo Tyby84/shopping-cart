@@ -35,3 +35,22 @@
 		@include hover($alert, 10%);
 	}
 }
+.link>a{
+	@include btn($link);
+}
+
+.empty-cart{
+	display: flex;
+	justify-content: center;
+	flex-basis: 50%;
+	flex-direction: column;
+	background-color: lighten($main, 5%);
+	height: auto;
+	align-items: center;
+	padding: 5rem;
+	
+	&__msg{
+		color: $text;
+		font-size: 2rem;
+	}
+}
